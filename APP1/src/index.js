@@ -5,13 +5,12 @@ function onNameButtonClick(name) {
   console.log(name);
 }
 
-function logInCheck() {
-  if (nameSelected= false) {
-    alert("Please select your name!");
-  } else {
+function onSignIn() {
+  if (nameSelected) {
     window.location.href = "checker.html";
+  } else {
+    alert("Please select your name!");
   }
-
 }
 
 

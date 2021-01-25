@@ -2,6 +2,15 @@ body {
     font-family: sans-serif;
   }
   
+  .feed-status{
+    border: #f44336 2px solid;
+    margin: 10px;
+  }
+
+  .feed-status__img {
+    height: 85px; width: 198px
+  }
+
   .button {
     background-color: #4caf50; /* Green */
     border: none;
