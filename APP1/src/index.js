@@ -3,6 +3,7 @@ var nameSelected = false;
 function onNameButtonClick(name) {
   nameSelected = true;
   console.log(name);
+  //to do save name to localstorage
 }
 
 function onSignIn() {
