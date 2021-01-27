@@ -9,14 +9,19 @@ for(const card of feedCards){
     card.addEventListener("click",function(){
         let currentStatus = card.dataset.status
 
-        /*currentStatus.addEventListener("change",function(){
-            let feedTime = new Date()
-            console.log(feedTime)
-        })*/
         console.log(currentStatus)
+    
         currentStatus = currentStatus === STATUS_FED ? STATUS_NOT_FED : STATUS_FED
         //if not fed will be fed, if fed become not fed//
+        
+        let timeIn = Date.now();
+        console.log(timeIn)
+
+
         console.log(currentStatus)
+
+        card.dataset.status = currentStatus
+
         const image = card.querySelector(".feed-status__img")
         image.src = currentStatus === STATUS_FED ? fedImage : notFedImage  
     })
