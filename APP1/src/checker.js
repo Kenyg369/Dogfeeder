@@ -32,14 +32,18 @@ async function saveStatus(status){
     let isSuccess = false
     const timestamp = Date.now();
     // todo get name from localstorage// 
-    const createdBy = "laoxie"
+    const createdBy = getCurrentUser();
     /*1.todo hook up with api server
       2.research AJAX, fetch API, axios (call- API related content)
       3.research async, await, promise, callback(Kaogu) */
     
       // (assume axios installed) **below are pseudo code logic
       try{
-        await axios.post("https://api.dogfeed.io/status",{createdBy:createdBy, timestamp:timestamp,status:status})
+        await axios.post("https://api.dogfeed.io/status",{
+          createdBy,
+          timestamp,
+          status
+        })
         isSuccess = true
     }  
       catch(error){
